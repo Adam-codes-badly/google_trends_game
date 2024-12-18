@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Player Data</title>
+</head>
+<body>
+    <h1>Input Player Data</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.player_name.label }}<br>
+            {{ form.player_name(size=32) }}
+        </p>
+        <p>
+            {{ form.word_1.label }}<br>
+            {{ form.word_1(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{ url_for('app.index') }}">Go to Index</a>
+</body>
+</html>
